@@ -45,22 +45,22 @@ Built with **Next.js** for the frontend and **MongoDB Atlas** for the backend, i
 
 ## **📸 Screenshots**
 ### **📌 Dashboard View**
-![DASHBOARDCRMTRAVEL](https://github.com/user-attachments/assets/1ec69ef0-47ef-467c-9ac3-89cf11fc1f63)
+![DASHBOARDCRMTRAVEL] - coming soon
 
 ### **📌 CRM Information**
-![CRMINFO](https://github.com/user-attachments/assets/99d71042-b04f-46d9-975c-a1ab4a98c59c)
+![CRMINFO] - coming soon
 
 ### **📌 Travel Map Integration**
-![CRMMAP](https://github.com/user-attachments/assets/f480a9b3-31f3-47e8-b2f4-e7c8e5de4423)
+![CRMMAP] - coming soon
 
 ### **📌 Product Details View**
-![CRMPHOTOSDETAIL](https://github.com/user-attachments/assets/bc8f70a3-1dda-4c28-9957-db6a0ea15c38)
+![CRMPHOTOSDETAIL] - coming soon
 
 ### **📌 General Descriptions Management**
-![GENERICDESCR](https://github.com/user-attachments/assets/49da1c03-ecc5-48ba-9e37-bafa13c2d27f)
+![GENERICDESCR] - coming soon
 
 ### **📌 Database Download Management**
-![CRMDATABASEDWNLOAD](https://github.com/user-attachments/assets/c4f8eeaa-6fba-42a5-8762-4ccc1f177c21)
+![CRMDATABASEDWNLOAD] - coming soon
 
 ---
 
