@@ -44,6 +44,9 @@ Built with **Next.js** for the frontend and **MongoDB Atlas** for the backend, i
 ---
 
 ## **📸 Screenshots**
+### **📌 Landing Page View**
+![LANDINGPAGE] - coming soon
+
 ### **📌 Dashboard View**
 ![DASHBOARDCRMTRAVEL] - coming soon
 
@@ -67,18 +70,18 @@ Built with **Next.js** for the frontend and **MongoDB Atlas** for the backend, i
 ## **🛠️ Setup Guide**
 ### **1️⃣ Clone the Repository**
 ```sh
-git clone https://github.com/your-repository-url.git
-cd CRM-for-Travel-Agency
+git clone https://github.com/jaysingh9518/epic-escape-tours.git
+cd epic-escape-tours
 ```
 
 ### **2️⃣ Install Dependencies**
 ```sh
 # Install frontend dependencies
-cd package
+cd epicescapetours
 npm install
 
 # Install backend dependencies
-cd ../NodejsAPI
+cd ../nodejsapi
 npm install
 ```
 
