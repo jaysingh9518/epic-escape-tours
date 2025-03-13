@@ -3,7 +3,11 @@ import Footer from "@/components/Footer";
 import EnquiryDialog from "@/components/EnquiryDialog";
 import ScrollToTop from "@/components/ScrollToTop";
 
-const Layout = ({ children }) => {
+export default function Layout ({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
   return (
     <div>
       <ScrollToTop />
@@ -14,5 +18,3 @@ const Layout = ({ children }) => {
     </div>
   );
 };
-
-export default Layout;
