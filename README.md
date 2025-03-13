@@ -1,120 +1,70 @@
-# **CRM for Travel Agency**
+# Getting Started with Create React App
 
-## **📌 Description**
-**CRM for Travel Agency** is a Customer Relationship Management (CRM) system tailored for travel agencies to manage their travel products efficiently. This platform allows agencies to handle solo trips, complete travel programs, and other travel-related services with ease.  
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Built with **Next.js** for the frontend and **MongoDB Atlas** for the backend, it offers a seamless, user-friendly experience for travel agencies.
+## Available Scripts
 
----
+In the project directory, you can run:
 
-## **📑 Table of Contents**
-- [🚀 Technologies Used](#-technologies-used)
-- [✨ Features](#-features)
-- [📸 Screenshots](#-screenshots)
-- [🛠️ Setup Guide](#️-setup-guide)
-- [📌 Usage Instructions](#-usage-instructions)
+### `npm run dev`
 
----
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## **🚀 Technologies Used**
-### **Frontend:**
-- **Next.js** (React Framework)
-- **TypeScript** (Strongly typed JavaScript)
-- **SCSS** (Enhanced styling with Sass)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-### **Backend:**
-- **Node.js** (Server-side runtime)
-- **Express.js** (Lightweight backend framework)
-- **MongoDB Atlas** (Cloud-based NoSQL database)
+### `npm test`
 
-### **Additional Tools:**
-- **Multer** (For file uploads)
-- **Bcrypt** (For secure password hashing)
-- **JWT (JSON Web Tokens)** (For authentication)
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
----
+### `npm run build`
 
-## **✨ Features**
-✅ **Product Management**: Easily view, edit, search, and bulk modify travel product details.  
-✅ **General Descriptions Management**: Add, delete, and assign descriptions to products.  
-✅ **User Authentication**: Secure user registration & login with JWT-based authentication.  
-✅ **File Uploads**: Upload XML files to add products to the database quickly.  
-✅ **Dynamic Frontend**: Responsive and interactive UI using **Next.js**.  
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
----
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## **📸 Screenshots**
-### **📌 Landing Page View**
-![LANDINGPAGE] - coming soon
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### **📌 Dashboard View**
-![DASHBOARDCRMTRAVEL] - coming soon
+### `npm run eject`
 
-### **📌 CRM Information**
-![CRMINFO] - coming soon
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-### **📌 Travel Map Integration**
-![CRMMAP] - coming soon
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### **📌 Product Details View**
-![CRMPHOTOSDETAIL] - coming soon
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-### **📌 General Descriptions Management**
-![GENERICDESCR] - coming soon
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-### **📌 Database Download Management**
-![CRMDATABASEDWNLOAD] - coming soon
+## Learn More
 
----
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## **🛠️ Setup Guide**
-### **1️⃣ Clone the Repository**
-```sh
-git clone https://github.com/jaysingh9518/epic-escape-tours.git
-cd epic-escape-tours
-```
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-### **2️⃣ Install Dependencies**
-```sh
-# Install frontend dependencies
-cd epicescapetours
-npm install
+### Code Splitting
 
-# Install backend dependencies
-cd ../nodejsapi
-npm install
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### **3️⃣ Set Up Environment Variables**
-Create a `.env` file in both **package** (frontend) and **NodejsAPI** (backend) directories and configure it with your API keys and database credentials.
+### Analyzing the Bundle Size
 
-Example `.env` file for backend:
-```env
-MONGO_URI=your-mongodb-atlas-url
-JWT_SECRET=your-secret-key
-PORT=5000
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
----
+### Making a Progressive Web App
 
-## **📌 Usage Instructions**
-🚀 **Run the application in one command!**  
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### **▶ Development Mode** (Hot reloading enabled, no build required)
-```sh
-node start.js
-```
+### Advanced Configuration
 
-### **▶ Production Mode** (Build first, then start)
-```sh
-node start.js prod
-```
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
----
+### Deployment
 
-### **📩 Need Help?**
-For any issues or contributions, feel free to open an issue in the repository.
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
----
+### `npm run build` fails to minify
 
-This **README.md** now has **clear formatting**, **detailed instructions**, and a **professional structure**! Let me know if you need any modifications. 🚀
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
