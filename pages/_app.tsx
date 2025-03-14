@@ -1,7 +1,7 @@
 import { SessionProvider } from 'next-auth/react';
 import type { AppProps } from 'next/app';
 import type { NextPage } from 'next';
-import Layout from '@/components/Layout';
+import Layout from './Layout';
 import Head from 'next/head';
 import { useMetadata } from '@/utils/useMetadata';
 
