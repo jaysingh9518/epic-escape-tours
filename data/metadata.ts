@@ -23,6 +23,18 @@ interface Metadata {
       title: 'Epic Escape Tours - Home',
       description: 'Discover amazing travel packages and tours with Epic Escape Tours.',
     },
+    '/profile': {
+      title: 'Epic Escape Tours - Profile',
+      description: 'Discover awesome travel packages and experiences with Epic Escape Tours.',
+    },
+    '/auth/login': {
+      title: 'Login - Epic Escape Tours',
+      description: 'Sign in to manage bookings, view travel history, and more.',
+    },
+    '/auth/register': {
+      title: 'Register - Epic Escape Tours',
+      description: 'Create an account with us to manage bookings, view travel history, and more.',
+    },
     '/about': {
       title: 'About Us - Epic Escape Tours',
       description: 'Learn more about our travel agency and the amazing experiences we offer.',

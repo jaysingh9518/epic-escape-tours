@@ -2,9 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
-import { Fab, Zoom } from '@mui/material';
-import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import { FaArrowUp, FaWhatsapp } from 'react-icons/fa';
 
 const ScrollToTop = () => {
   const pathname = usePathname();
@@ -41,46 +39,29 @@ const ScrollToTop = () => {
   };
 
   return (
-    <>
-      {/* Scroll-to-Top Floating Button */}
-      <Zoom in={showButton}>
-        <Fab
+    <div className="fixed bottom-4 right-4 flex flex-col gap-3 z-50">
+      {/* Scroll-to-Top Button */}
+      {showButton && (
+        <button
           onClick={scrollToTop}
-          color="primary"
-          size="medium"
-          aria-label="scroll to top"
-          sx={{
-            position: 'fixed',
-            bottom: 16,
-            right: 16,
-            zIndex: 1000,
-            color: 'white',
-          }}
+          className="bg-blue-500 text-white p-3 rounded-full shadow-md hover:bg-blue-600 transition"
+          aria-label="Scroll to top"
         >
-          <ArrowUpwardIcon />
-        </Fab>
-      </Zoom>
+          <FaArrowUp size={24} />
+        </button>
+      )}
 
-      {/* WhatsApp Floating Button */}
-      <Zoom in={showButton}>
-        <Fab
+      {/* WhatsApp Button */}
+      {showButton && (
+        <button
           onClick={handleWhatsAppClick}
-          color="success"
-          size="medium"
+          className="bg-green-500 text-white p-3 rounded-full shadow-md hover:bg-green-600 transition"
           aria-label="WhatsApp"
-          sx={{
-            position: 'fixed',
-            bottom: 16,
-            left: 16,
-            zIndex: 1000,
-            backgroundColor: '#25D366',
-            '&:hover': { backgroundColor: '#128C7E' },
-          }}
         >
-          <WhatsAppIcon />
-        </Fab>
-      </Zoom>
-    </>
+          <FaWhatsapp size={24} />
+        </button>
+      )}
+    </div>
   );
 };
 

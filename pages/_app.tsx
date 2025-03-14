@@ -1,13 +1,20 @@
-import React from "react";
-import Layout from "@/components/Layout";
-import { ThemeProvider } from "@mui/material/styles";
-import theme from "@/styles/theme";
-import "@/styles/globals.css";
+import { SessionProvider } from 'next-auth/react';
 import type { AppProps } from 'next/app';
+import type { NextPage } from 'next';
+import Layout from '@/components/Layout';
 import Head from 'next/head';
 import { useMetadata } from '@/utils/useMetadata';
 
-export default function App({ Component, pageProps } : AppProps) {
+type NextPageWithLayout = NextPage & {
+  getLayout?: (page: React.ReactNode) => React.ReactNode;
+};
+
+type AppPropsWithLayout = AppProps & {
+  Component: NextPageWithLayout;
+};
+
+export default function App({ Component, pageProps: { session, ...pageProps } }: AppPropsWithLayout) {
+  const getLayout = Component.getLayout || ((page) => <Layout>{page}</Layout>);
   const { title, description, canonical, openGraph, twitter } = useMetadata();
 
   return (
@@ -38,11 +45,9 @@ export default function App({ Component, pageProps } : AppProps) {
           <meta key={index} name="twitter:image" content={image} />
         ))}
       </Head>
-      <ThemeProvider theme={theme}>
-        <Layout>
-          <Component {...pageProps} />
-        </Layout>
-      </ThemeProvider>
+      <SessionProvider session={session}>
+        {getLayout(<Component {...pageProps} />)}
+      </SessionProvider>
     </>
   );
 }
