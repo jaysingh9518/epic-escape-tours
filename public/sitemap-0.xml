@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
-<url><loc>https://epicescapetours.com</loc><lastmod>2025-03-14T21:11:54.811Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://epicescapetours.com/Layout</loc><lastmod>2025-03-14T21:11:54.812Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://epicescapetours.com/auth/error</loc><lastmod>2025-03-14T21:11:54.812Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://epicescapetours.com/auth/login</loc><lastmod>2025-03-14T21:11:54.812Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://epicescapetours.com/auth/register</loc><lastmod>2025-03-14T21:11:54.812Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://epicescapetours.com/auth/signin</loc><lastmod>2025-03-14T21:11:54.812Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://epicescapetours.com/auth/signout</loc><lastmod>2025-03-14T21:11:54.812Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://epicescapetours.com/profile</loc><lastmod>2025-03-14T21:11:54.812Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
-<url><loc>https://epicescapetours.com/provider</loc><lastmod>2025-03-14T21:11:54.812Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.epicescapetours.com</loc><lastmod>2025-03-15T10:34:03.028Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.epicescapetours.com/Layout</loc><lastmod>2025-03-15T10:34:03.029Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
+<url><loc>https://www.epicescapetours.com/profile</loc><lastmod>2025-03-15T10:34:03.029Z</lastmod><changefreq>daily</changefreq><priority>0.7</priority></url>
 </urlset>
