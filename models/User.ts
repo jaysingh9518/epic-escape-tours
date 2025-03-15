@@ -1,21 +1,26 @@
 import mongoose, { Schema, model } from "mongoose";
 
 export interface UserDocument {
-  _id: string;
+  clerkId: string;
+  firstname: string;
+  lastname: string;
+  imageUrl: string;
   username: string;
-  email: string;
-  password?: string;  // Optional for OAuth
-  name: string;
+  email: string;  // Optional for OAuth
   phone?: string;
-  image?: string;
-  provider?: string;     // e.g., 'google', 'facebook'
-  providerId?: string;   // Unique identifier from OAuth provider
+  admin: boolean;
+  active: boolean;
   createdAt: Date;
   updatedAt: Date;
 }
 
 const UserSchema = new Schema<UserDocument>(
   {
+    clerkId: { type: String, required: true, unique: true },
+    firstname: { type: String, required: true },
+    lastname: { type: String, default: "" },
+    imageUrl: { type: String, required: true },
+    username: { type: String, required: false, unique: true }, // Optional for OAuth
     email: {
       type: String,
       unique: true,
@@ -25,23 +30,8 @@ const UserSchema = new Schema<UserDocument>(
         "Email is invalid",
       ],
     },
-    username: {
-      type: String,
-      unique: true,
-      required: [true, "Username is required"],
-    },
-    password: {
-      type: String,
-      required: function () { return !this.provider; },
-    },
-    name: {
-      type: String,
-      required: [true, "Name is required"],
-    },
-    phone: String,
-    image: String,
-    provider: String,
-    providerId: String,
+    admin: { type: Boolean, default: false, required: true },
+    active: { type: Boolean, default: true, required: true }
   },
   {
     timestamps: true,

@@ -1,4 +1,5 @@
-import { SessionProvider } from 'next-auth/react';
+import { ClerkProvider} from "@clerk/nextjs";
+import { ThemeProvider } from "next-themes";
 import type { AppProps } from 'next/app';
 import type { NextPage } from 'next';
 import Layout from './Layout';
@@ -14,7 +15,7 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
 
-export default function App({ Component, pageProps: { session, ...pageProps } }: AppPropsWithLayout) {
+export default function App({ Component, pageProps: { ...pageProps } }: AppPropsWithLayout) {
   const getLayout = Component.getLayout || ((page) => <Layout>{page}</Layout>);
   const { title, description, canonical, openGraph, twitter } = useMetadata();
 
@@ -46,9 +47,11 @@ export default function App({ Component, pageProps: { session, ...pageProps } }:
           <meta key={index} name="twitter:image" content={image} />
         ))}
       </Head>
-      <SessionProvider session={session}>
-        {getLayout(<Component {...pageProps} />)}
-      </SessionProvider>
+      <ClerkProvider {...pageProps}>
+        <ThemeProvider attribute="class">
+          {getLayout(<Component {...pageProps} />)}
+        </ThemeProvider>
+      </ClerkProvider>
     </>
   );
 }
