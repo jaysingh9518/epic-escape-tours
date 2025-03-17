@@ -15,7 +15,7 @@ interface Metadata {
     },
     language: 'en-us',
     locale: 'en-US',
-    siteLogo: `${process.env.BASE_PATH || ''}/public/images/logo.png`,
+    siteLogo: `${process.env.BASE_PATH || ''}/public/logo.png`,
   };
   
   const metadata: Metadata = {

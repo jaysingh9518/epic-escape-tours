@@ -1,14 +1,15 @@
 import mongoose, { Schema, model } from "mongoose";
 
+// User Document
 export interface UserDocument {
   clerkId: string;
-  firstname: string;
-  lastname: string;
-  imageUrl: string;
+  firstName: string;
+  lastName: string;
   username: string;
-  email: string;  // Optional for OAuth
+  imageUrl: string;
   phone?: string;
-  admin: boolean;
+  email: string;
+  role: string;
   active: boolean;
   createdAt: Date;
   updatedAt: Date;
@@ -17,10 +18,11 @@ export interface UserDocument {
 const UserSchema = new Schema<UserDocument>(
   {
     clerkId: { type: String, required: true, unique: true },
-    firstname: { type: String, required: true },
-    lastname: { type: String, default: "" },
-    imageUrl: { type: String, required: true },
+    firstName: { type: String, required: true },
+    lastName: { type: String, default: "" },
     username: { type: String, required: false, unique: true }, // Optional for OAuth
+    imageUrl: { type: String, required: true },
+    phone: { type: String },
     email: {
       type: String,
       unique: true,
@@ -30,8 +32,8 @@ const UserSchema = new Schema<UserDocument>(
         "Email is invalid",
       ],
     },
-    admin: { type: Boolean, default: false, required: true },
-    active: { type: Boolean, default: true, required: true }
+    role: { type: String, default: "user" },
+    active: { type: Boolean, default: true }
   },
   {
     timestamps: true,

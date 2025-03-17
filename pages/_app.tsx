@@ -1,4 +1,8 @@
+import { queryClient } from "@/lib/queryClient";
+import { QueryClientProvider } from "@tanstack/react-query";
 import { ClerkProvider} from "@clerk/nextjs";
+import { Toaster } from "@/components/ui/toaster";
+import { neobrutalism } from '@clerk/themes'
 import { ThemeProvider } from "next-themes";
 import type { AppProps } from 'next/app';
 import type { NextPage } from 'next';
@@ -26,8 +30,8 @@ export default function App({ Component, pageProps: { ...pageProps } }: AppProps
         <meta name="description" content={description} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="UTF-8" />
-        <link rel="icon" href="@/public/images/favicon-2.png" />
-        <link rel="apple-touch-icon" sizes="180x180" href="@/public/images/favicon.png" />
+        <link rel="icon" href="@/public/favicon.png" />
+        <link rel="apple-touch-icon" sizes="180x180" href="@/public/favicon.png" />
         <link rel="canonical" href={canonical} />
 
         {/* Open Graph tags */}
@@ -47,11 +51,16 @@ export default function App({ Component, pageProps: { ...pageProps } }: AppProps
           <meta key={index} name="twitter:image" content={image} />
         ))}
       </Head>
-      <ClerkProvider {...pageProps}>
-        <ThemeProvider attribute="class">
-          {getLayout(<Component {...pageProps} />)}
-        </ThemeProvider>
-      </ClerkProvider>
+      <QueryClientProvider client={queryClient}>
+        <ClerkProvider {...pageProps} appearance={{
+        baseTheme: [neobrutalism],
+      }}>
+          <ThemeProvider attribute="class">
+            {getLayout(<Component {...pageProps} />)}
+            <Toaster />
+          </ThemeProvider>
+        </ClerkProvider>
+      </QueryClientProvider>
     </>
   );
 }

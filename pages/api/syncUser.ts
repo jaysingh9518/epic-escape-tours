@@ -9,7 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(405).json({ message: 'Method Not Allowed' });
   }
 
-  const { clerkId, email, firstname, lastname, username, imageUrl } = req.body;
+  const { clerkId, email, firstName, lastName, username, imageUrl } = req.body;
 
   if (!clerkId || !email) {
     return res.status(400).json({ message: 'Clerk ID and email are required.' });
@@ -29,12 +29,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         await User.findOneAndUpdate({ clerkId }, { imageUrl });
       }
 
-      if (firstname?.trim() && existingUser.firstname !== firstname) {
-        await User.findOneAndUpdate({ clerkId }, { firstname });
+      if (firstName?.trim() && existingUser.firstName !== firstName) {
+        await User.findOneAndUpdate({ clerkId }, { firstName });
       }
 
-      if (lastname?.trim() && existingUser.lastname !== lastname) {
-        await User.findOneAndUpdate({ clerkId }, { lastname });
+      if (lastName?.trim() && existingUser.lastName !== lastName) {
+        await User.findOneAndUpdate({ clerkId }, { lastName });
       }
 
       return res.status(200).json({ message: 'User updated successfully in MongoDB.' });
@@ -42,8 +42,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const newUser = new User({
       clerkId,
-      firstname,
-      lastname,
+      firstName,
+      lastName,
       email,
       username,
       imageUrl,
